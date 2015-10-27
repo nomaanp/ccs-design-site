@@ -1,0 +1,260 @@
+#header
+  fixed: top
+  color: #111
+  width: 100%
+  z-index: 500
+  background-color: rgba(255,255,255,0.45);
+  height: header-height
+  
+  text-align: center
+  text-transform: uppercase
+  a
+    color: #111
+
+  .share
+    absolute: right 20px
+    z-index: 600
+    
+    .share-btn
+      display: block
+      height: header-height
+      padding: 7px 5px 0
+      box-sizing: border-box
+      color: #EEC142
+      font-size: 1.5em
+      &.expanded
+        border-color: #979797
+      span
+        display: block
+        size: 33px
+        line-height: 33px
+        //border: 2px solid
+        border-radius: 33px
+
+    .share-ul
+      list-style: none
+      margin: 0
+      padding: 0
+      background-color: rgba(255,255,255,.45)
+      overflow: hidden
+      box-sizing: border-box
+      position: absolute // TODO: improve
+      width: 100%
+      &.hidden
+        display: none
+      a
+        display: block
+        margin: 5px
+        padding: 3px 0
+        color: #111
+        font-size: 1.25em
+        transition: color 0.5s, border-color 0.5s
+        &:hover
+          color: #EEC142
+          border-color: #EEC142
+
+  .logo
+    size: 100% 60%
+    margin: 50px auto
+    img
+      height: 100%
+      display: block
+      margin: 0 auto
+      box-sizing: border-box
+      background: url('../img/icons/ccs-logo.svg') no-repeat center
+      size: 50px  
+
+  .menu
+    absolute: top left 10px
+    z-index: 600
+    
+    .menu-btn
+      display: block
+      padding: 0 10px
+      height: header-height
+      line-height: header-height
+      font-size: 1em
+      letter-spacing: 1px
+      .text
+        float: left
+        margin-left 10px
+      .icon
+        float: left
+        margin: (header-height - 30px) 0 0 20px
+      .bar
+        display: block
+        background-color: #111
+        width: 35px
+        height: 1px
+        & + .bar
+          margin-top: 5px
+
+  +below(625px)
+    text-align: left
+    overflow: hidden
+    
+    .share
+      display: none
+
+    .logo
+      position: static
+      display: inline-block
+      width: auto
+      a
+        display: inline-block
+        width: auto
+        max-width: none
+        margin: 0
+      a:before, a:after
+        content: none
+    .menu
+      right: 0
+
+  +between(441px, 625px)
+    .logo a
+      padding: 0 20px
+    .menu
+      padding-left: 8px
+      double-border(6px, header-height+2, #FFF)
+      &:after
+        content: none
+
+  +below(440px)
+    .logo a
+      padding: 0 55px 0 10px
+    .menu .menu-btn
+      .text
+        display: none
+      .icon
+        margin-left: 0
+
+
+#sidenav
+  fixed: top 51px right bottom
+  width: 100%
+  margin-right: -300px
+  padding 0
+  z-index: 600
+  //background-color: rgba(0,0,0,0.9)
+  background-color: rgba(255,255,255,0.7);
+  overflow-y: auto
+  
+  +below(300px)
+    position: static
+    margin-top: header-height+1
+    width: auto
+  
+  &.hidden
+    display: none
+
+  .close
+    float: left
+    margin-left 10px
+    a
+      display: block
+      size: 50px
+      background: url('../img/icons/times-circle.svg') no-repeat #333
+      background-size: 100%
+      border-radius 200px      
+
+  ul
+    clearfix()
+    text-align: center
+    list-style: none
+    margin: 0
+    padding: 0
+    li
+      box-sizing: border-box
+      // border-bottom: 1px solid #FFF
+      // border-left: 1px solid #FFF
+      
+      /*+above(441px)
+        col(1/2, cycle: 2, gutter: 0)
+        &:nth-child(odd)
+          border-right: 1px solid #FFF*/
+    a
+      display: block
+      padding: 30px 0
+      color: #000
+      font-family: raleway
+      font-size: 1.25em
+      font-weight: bold
+      letter-spacing: 1px
+      text-transform: uppercase
+      &:hover
+        text-decoration: underline
+
+
+.page-head
+  clearfix()
+  padding: 70px 35px 0 35px
+  margin-bottom: 15px
+  
+  h1
+    font-family: raleway
+    font-size: 2em
+    font-weight: normal
+    letter-spacing: 2px
+    color: #111
+    text-transform: uppercase
+    
+    margin: 0 0 10px
+    padding-bottom: 10px
+    float: left
+    position: relative
+    &:before
+      content: ""
+      size: 100px 5px
+      background-color: #E5E5E5
+      absolute: bottom left 8px
+    
+    +below(400px)
+      font-size: 3em
+      &:before
+        size: 125px 7.5px
+
+  .filter
+    float: right
+    display: inline-block
+    position: relative
+    
+    text-align: center
+    text-transform: uppercase
+    font-weight: 500
+    letter-spacing: 1px
+    a
+      color: font-light-color
+      font-size: 0.95em
+      letter-spacing: 2px
+      vertical-align: bottom
+
+    .box
+      border: 1px solid #E5E5E5
+      padding: 0 10px
+      min-width: 80px
+      line-height: 50px
+      height: 50px
+      display: inline-block
+
+    .box + .box
+      margin-left: -1px
+      
+    ol, ul
+      list-style: none
+      margin: 0 0 0 -11px
+      padding: 0
+      position: absolute
+      z-index 300
+      background-color: #FFF
+      border: 1px solid #E5E5E5
+      box-sizing: border-box
+      &.hidden
+        display: none
+      li
+        border-bottom: 1px solid #E5E5E5
+        &:last-child
+          border-bottom: 0 none
+      a
+        display: block
+        width: 100px
+        line-height: 30px

@@ -1,0 +1,21 @@
+extends layout
+
+block head
+  title Work | CCS Design House
+
+block css
+  link(href='css/about.css', rel='stylesheet')
+
+block content
+  section.page.about-page
+    .page-head
+      h1 Work
+
+ 
+    .about.page-inner
+
+      .hero-boxes: .hero-container
+
+        .hero-box.left.artist-statement
+          
+           != site.content.work['work'][0].content

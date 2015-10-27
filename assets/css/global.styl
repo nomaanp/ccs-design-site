@@ -1,0 +1,44 @@
+@import '_settings'
+@import '_animations'
+@import 'jeet'
+
+normalize-css()
+base()
+
+a
+  color: #0e8eb5
+  text-decoration: none
+  outline: none
+
+p
+  font-size: 1.25em
+  margin: 15px 0
+  color: rgb(0,0,0)
+  margin: 0 0 25px;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: 1px
+  
+figure
+  margin: 0
+
+.page
+  margin-top: header-height
+.page-inner
+  padding: 0 45px
+  +between(546px, 860px)
+    padding: 0 30px
+  +below(545px)
+    padding: 0 20px
+    
+@font-face {
+    font-family: myFirstFont;
+    src: url(../fonts/font-webfont.woff);
+    src: url(../fonts/font-webfont.svg);
+    src: url(../fonts/font-webfont.ttf);
+}
+
+@import '_header'
+
+@import '_footer'

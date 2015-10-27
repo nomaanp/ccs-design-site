@@ -1,0 +1,54 @@
+extends layout
+
+block head
+  title CCS Design House
+
+block css
+  link(href='css/home.css', rel='stylesheet')
+  link(href='css/slider.css', rel='stylesheet')
+  
+block content
+  section.page.home-page
+    .cd-hero
+      ul.cd-hero-slider.autoplay
+        li.selected
+          .slide-1.cd-full-width
+            .hero-content
+              h1 New Home &amp; 
+        //li
+          .slide-2.cd-full-width
+            .hero-content
+              h1 Welcome to C C Southard's Website
+
+      .arrow
+        a(href='#'): i.fa.fa-long-arrow-down
+
+    //-.hero
+      .hero-content
+        h1 Take a seat &amp; gaze
+
+      .arrow
+        a(href='#'): i.fa.fa-long-arrow-down
+
+    nav
+      a(href='gallery.html').item.gallery
+        p Gallery
+
+      a(href='words.html').item.words
+        p Words
+
+      a(href='about.html').item.about
+        p About
+
+      a(href='news.html').item.news
+        p News
+
+    // != site.content.work['work'][0].content
+         .about.page-inner
+
+    .hero-boxes: .hero-container
+        != site.content.about['statement'][0].content
+
+block js
+  script(src='js/home.js')
+  script(src='js/slider.js')

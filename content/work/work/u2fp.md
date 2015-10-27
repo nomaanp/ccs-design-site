@@ -1,0 +1,23 @@
+---
+title: U2FP | Unite 2 Fight Paralysis
+link: http://www.u2fp.org
+_render: false
+---
+
+U2FP is a leading non-profit organization dedicated to empowering the international spinal cord injury community to cure paralysis through advocacy, education, and research. U2FP came to Ibis looking to enhance their content strategy, corporate identity and increase site visits through user navigation.
+
+#### Site Features
+• Easy to Maintain Event Pages.
+• Enhanced interaction with CRM (Neon) Nonprofit Database
+
+#### Management System.
+• Dynamic Newsletter Box
+• Social Media Integration
+• Real-time RSS news feeds of blogs and Google news
+• Lightbox slideshow enabled for video/film integration.
+• A responsive design that is optimized for mobile devices.
+• A WordPress CMS promotes simple maintenance and future adaptation.
+
+The site is built on an open source WordPress content management system which promotes simple maintenance and future adaptation.
+
+The end result is a stunning website that displays a reengineered site map, cutting edge icon navigation and features for video production projects.
