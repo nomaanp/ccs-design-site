@@ -21,9 +21,6 @@ html, body, .home-page
   height: 100%
 
 .home-page2
-  margin-top: 50px
-
-.home-page
   width: 100%;
   float: left;
   display: block;
@@ -33,9 +30,67 @@ html, body, .home-page
   -webkit-transition: all 300ms;
   -moz-transition: all 300ms;
   transition: all 300ms;
-  padding-top: 100px;
+  padding-top: 0px;
+
+.home-page
+  width: 100%;
+  float: left;
+  margin-top: 100px;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+  padding-top: 0px;
+
+nav
+  clearfix()
+  border: 1px solid #979797
+  border-width: 1px 0
   
-  .cd-hero2
+  .item
+    col(1/2, gutter:0)
+    position: relative
+    height: 250px
+    border: 1px solid #979797
+    box-sizing: border-box
+    +below(625px)
+      stack()
+
+    p
+      align()
+      text-align: center
+      text-transform: uppercase
+      letter-spacing: 2px
+      font-weight: 500
+      size: 210px 26px
+      line-height: 26px
+      border-width: 1px 0
+      border-style: solid
+      double-border(15px, 26px, false)
+      +below(300px)
+        width: auto
+        padding: 0 20px
+
+  .gallery
+    background: gallery_bg
+    p
+      color: gallery_color
+
+  .words
+    background: words_bg
+    p
+      color: words_color
+
+  .about
+    background: about_bg
+    p
+      color: about_color
+
+  .news
+    background: news_bg
+    p
+      color: news_color
+
+.cd-hero2
     position: relative
     float right
     margin: auto;
@@ -48,13 +103,15 @@ html, body, .home-page
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 20px;
-    margin-top: -90px;
+    margin-top: -100px;
+    margin-right: 0px
     position: relative;
     float: left;
     width: 100%;
-    height 50%
+    height 100%
     text-align: center;
     
+
     .cd-hero-slider
       height: 100%
       
@@ -79,7 +136,7 @@ html, body, .home-page
           font-size: 2em
 
     .cd-full-width
-      padding-top: 0
+      padding-top: 0 !important
 
     .slide-1
       background-image: hero_img
@@ -92,7 +149,7 @@ html, body, .home-page
       background-position: center
   
     .arrow
-      absolute: bottom 30px left 50%
+      absolute: bottom 60px left 50%
       margin-left: -21px
       a
         bounce(2s, true, linear)
@@ -103,51 +160,136 @@ html, body, .home-page
         display: block
         padding: 8px 18px
 
-  nav
-    clearfix()
-    border: 1px solid #979797
-    border-width: 1px 0
-    
-    .item
-      col(1/2, gutter:0)
+
+h1
+  .gold
+    color #937D57
+    font-weight 700
+
+.summary
+  width: 100%
+  float: left
+  margin-bottom: 70px
+  .summary-big
+    display block
+    float left
+    margin-left 5.77496%
+    width 50.563%
+    &:last-child
+      margin-right 0
+
+    h1
+      margin-top: 0px
+      font-size: 4em
       position: relative
-      height: 250px
-      border: 1px solid #979797
-      box-sizing: border-box
-      +below(625px)
-        stack()
-  
-      p
-        align()
-        text-align: center
-        text-transform: uppercase
-        letter-spacing: 2px
-        font-weight: 500
-        size: 210px 26px
-        line-height: 26px
-        border-width: 1px 0
-        border-style: solid
-        double-border(15px, 26px, false)
-        +below(300px)
-          width: auto
-          padding: 0 20px
+      text-transform: uppercase
+    h5
+      color #937D57
+      padding-bottom 10px
+  .summary-box
+    display block
+    float left
+    margin-left 42.7623%
+    margin-right 1.07451%
+    margin-top -90px
+    padding 60px 55px 60px 50px
+    background-color: #f4f1ef
+    p
+      margin-bottom 40px
+      font-size: 22px
+      a
+        color #937D57
+        padding 10px 10px 5px 0
+        font-size: 18px
+        text-decoration none
+        border-bottom 4px solid #beae92
+        -webkit-transition all 200ms cubic-bezier(0.19, 1, 0.22, 1)
+        -moz-transition all 200ms cubic-bezier(0.19, 1, 0.22, 1)
+        transition all 200ms cubic-bezier(0.19, 1, 0.22, 1)
+        &:hover
+          padding-right 40px
+    .summary-box-link
+      float left
+      display block
+      margin-right 1.07451%
+      width 57.23771%
+      padding-top 40px
+      &:last-child
+        margin-right 0
+      a
+        color #937D57
+        padding 10px 10px 5px 0
+        text-decoration none
+        border-bottom 4px solid #beae92
 
-    .gallery
-      background: gallery_bg
-      p
-        color: gallery_color
+.work-grid-post
+  width 100%
+  float left
+  margin-bottom 70px
+  h2
+    font-size 4em
+    margin 0 0 40px
+  ul
+    margin 0 0 0px
+    padding 0px
+    width 100%
+    float left
+    li
+      width 31%
+      padding 10px;
+      float left
+      list-style none
+      margin-bottom 40px
+      h2
+        line-height 23px
+        text-overflow: ellipsis
+        white-space: nowrap
+        width: 100%
+        overflow: hidden
+      img
+        max-width 100%
+        min-height 303px
+      a
+        color: #2a2a2a
+        font-size: 1.6rem
+  .button
+    margin-botto 30px
+    text-align center
+    font-size 1.1em
+    a
+      background-color: #937d57;
+      color #fff;
+      padding 25px 50px;
+      font-size 100%
+      font-weight 500
+      text-transform uppercase
+      text-decoration none
+      &:hover
+        background-color: #beae92;
 
-    .words
-      background: words_bg
-      p
-        color: words_color
+.home-recent-news
+  width 100%
+  float left
+  margin-bottom 40px
+  background #ebebeb url("../img/home/temp_background_texture.gif") repeat scroll center center
+  h2
+    font-size 2em
+    text-align center
+    margin 40px 0
+  .container
+    display: block;
+    float: left;
+    margin-left: 3.88748%;
+    margin-right: 1.07451%;
+    padding-top: 0;
+    width: 92.225%;
+  article
+    border-bottom 1px solid #a3a6ac
+    color #a3a6ac
+    display block
+    overflow hidden
+    padding 30px 0
+    position relative
+    text-decoration none
+    text-align center
 
-    .about
-      background: about_bg
-      p
-        color: about_color
-
-    .news
-      background: news_bg
-      p
-        color: news_color

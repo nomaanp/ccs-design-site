@@ -2,9 +2,12 @@
   fixed: top
   color: #111
   width: 100%
-  z-index: 500
+  z-index: 750
   background-color: rgba(255,255,255,0.45);
-  height: header-height
+  //height: header-height2
+  padding: 25px 0
+  transition: all 0.4s ease-in-out
+  -web-kit-transition: all 0.4s ease-in-out
   
   text-align: center
   text-transform: uppercase
@@ -12,8 +15,10 @@
     color: #111
 
   .share
-    absolute: right 20px
+    absolute: right 20px top 24px
     z-index: 600
+    transition: all 0.4s ease-in-out
+    -web-kit-transition: all 0.4s ease-in-out
     
     .share-btn
       display: block
@@ -54,8 +59,8 @@
           border-color: #EEC142
 
   .logo
-    size: 100% 60%
-    margin: 50px auto
+    size: 100% 100%
+    margin: 0px auto
     img
       height: 100%
       display: block
@@ -65,8 +70,10 @@
       size: 50px  
 
   .menu
-    absolute: top left 10px
+    absolute: top 24px left 10px
     z-index: 600
+    transition: all 0.4s ease-in-out
+    -web-kit-transition: all 0.4s ease-in-out
     
     .menu-btn
       display: block
@@ -129,15 +136,25 @@
         margin-left: 0
 
 
+#sidenav.hidden {
+  margin-right: 70% !important
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+}
+
 #sidenav
-  fixed: top 51px right bottom
+  fixed: top 100px right bottom
   width: 100%
-  margin-right: -300px
   padding 0
   z-index: 600
   //background-color: rgba(0,0,0,0.9)
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255,255,255,0.5)
   overflow-y: auto
+  transition: all 0.3s ease-in-out
+  -webkit-transition: all 0.3s ease-in-out
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  margin-right: 0px !important
   
   +below(300px)
     position: static
@@ -148,8 +165,11 @@
     display: none
 
   .close
-    float: left
-    margin-left 10px
+    float: right
+    margin-right 10px
+    margin-top: -15%
+    position: relative
+    z-index: 99
     a
       display: block
       size: 50px
@@ -174,7 +194,7 @@
           border-right: 1px solid #FFF*/
     a
       display: block
-      padding: 30px 0
+      padding: 25px 0
       color: #000
       font-family: raleway
       font-size: 1.25em
@@ -258,3 +278,38 @@
         display: block
         width: 100px
         line-height: 30px
+
+#header.fix-header 
+  padding: 10px 0
+  background-color: rgba(255,255,255,0.85);
+
+#header.fix-header .share
+  top: 10px
+
+#header.fix-header .menu
+  top: 10px
+
+#sidenav ~ .page
+  filter: blur(5px);
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  -webkit-filter: blur(5px);
+
+#sidenav.hidden ~ .page
+  filter: blur(0px);
+  -moz-filter: blur(0px);
+  -ms-filter: blur(0px);
+  -webkit-filter: blur(0px);
+
+#sidenav ~ .page2
+  filter: blur(5px);
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  -webkit-filter: blur(5px);
+
+#sidenav.hidden ~ .page2
+  filter: blur(0px);
+  -moz-filter: blur(0px);
+  -ms-filter: blur(0px);
+  -webkit-filter: blur(0px);
+

@@ -20,11 +20,30 @@ $('#header .menu .menu-btn').click (e) ->
     $sidenav = $('#sidenav')
     if $sidenav.hasClass('hidden')
         $sidenav.removeClass('hidden').animate({'margin-right':0})
+        $('#sidenav ul li').addClass 'fadeInUp2'
     else
-        $sidenav.animate({'margin-left':-300}, {complete:-> $(this).addClass('hidden')})
+        $sidenav.animate({'margin-left':0}, {complete:-> $(this).addClass('hidden')})
+        $('#sidenav ul li').removeClass 'fadeInUp2'
 
 # close side navigation
 $('#sidenav .close a').click (e) ->
     e.preventDefault()
     $sidenav = $('#sidenav')
-    $sidenav.animate({'margin-left':-300}, {complete:-> $(this).addClass('hidden')})
+    $sidenav.animate({'margin-left':0}, {complete:-> $(this).addClass('hidden')})
+    $('#sidenav ul li').removeClass 'fadeInUp2'
+
+
+wow = new WOW(
+  boxClass: 'wow'
+  animateClass: 'animated'
+  offset: 0
+  mobile: true
+  live: true
+  callback: (box) ->
+    # the callback is fired every time an animation is started
+    # the argument that is passed in is the DOM node being animated
+    return
+  scrollContainer: null)
+wow.init()
+
+

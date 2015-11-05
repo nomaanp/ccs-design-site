@@ -1,2 +1,30 @@
 footer#footer
-  p &copy; Chaz Southard #{new Date().getFullYear()}
+	.footer-social-links
+		.footer-container
+			ul.links
+				li.facebook: a(target='_blank', href='https://www.facebook.com/sharer/sharer.php?u=http://chazsouthard.com/') 
+					i.fa.fa-facebook <span>Facebook</span>
+				li.twitter: a(target='_blank', href='http://twitter.com/intent/tweet?url=http://chazsouthard.com/&text=The%20portfolio%20of%20Chaz%20Southard%0A')
+					i.fa.fa-twitter <span>Twitter</span>
+				li.dribbble: a(target='_blank', href='#')
+					i.fa.fa-dribbble <span>Dribbble</span>
+
+	.footer-bottom.footer-container
+		.footer-links.footer-links-1
+			ul.menu
+				li: a(href=relative_path+'index.html') Home			
+				li: a(href=relative_path+'gallery.html') Gallery			
+				li: a(href=relative_path+'words.html') Words			
+				li: a(href=relative_path+'work.html') Work	
+
+		.footer-links.footer-links-2
+			ul.menu
+				li: a(href=relative_path+'about.html') About			
+				li: a(href=relative_path+'services.html') Services			
+				li: a(href=relative_path+'news.html') Blog	
+
+		.footer-address
+			p 2129 East Seventh Street<br> Charlotte, NC 28204<br>  (704) 358.1565<br> info@Lorem.com
+
+		.footer-logo
+			a(href='index.html'): img(src=relative_path+'img/icons/ccs-logo.png')

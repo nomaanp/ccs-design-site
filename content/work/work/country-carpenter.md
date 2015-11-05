@@ -1,6 +1,7 @@
 ---
 title: The Country Carpenter Remodeling Company
 link: http://www.countrycarpentertopsfield.com
+image: content/work/assets/country-carpenter/cc-homepage.jpg
 _render: false
 ---
 

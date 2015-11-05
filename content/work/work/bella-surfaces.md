@@ -1,6 +1,7 @@
 ---
 title: Bella Surfaces
 link: http://www.bellasurfaces.com/
+image: content/work/assets/bella-surfaces/bella-home.jpg
 _render: false
 ---
 

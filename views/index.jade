@@ -6,7 +6,20 @@ block head
 block css
   link(href='css/home.css', rel='stylesheet')
   link(href='css/slider.css', rel='stylesheet')
+  link(href='css/animate.css', rel='stylesheet')
   
+mixin display-news(exhibit, date)
+  article.exhibit-item
+    .content
+      header
+        span.date
+          = monthNames[date.getMonth()] + ' '
+          = date.getDate() + ', '
+          = date.getFullYear()
+        h4.title
+          a(href='.'+exhibit._url)
+            = exhibit.title
+
 block content
   section.page.home-page
     .cd-hero
@@ -30,7 +43,8 @@ block content
       .arrow
         a(href='#'): i.fa.fa-long-arrow-down
 
-    nav
+  section.page2.home-page2
+    //nav
       a(href='gallery.html').item.gallery
         p Gallery
 
@@ -43,12 +57,37 @@ block content
       a(href='news.html').item.news
         p News
 
-    // != site.content.work['work'][0].content
-         .about.page-inner
-
     .hero-boxes: .hero-container
-        != site.content.about['statement'][0].content
+          != site.content.about['statement'][0].content
+
+    //!= site.content.work['work'][0].content
+    .work-grid-post
+      h2.wow.fadeInUp Projects
+      ul#work
+        - var count = 0
+        
+        for w in site.content.work['work']
+          if count < 3
+            li.wow.fadeInUp
+              a(href=w._url): img(src=w.image)
+              h2: a(href=w._url)= w.title
+              - count++
+      h5.button
+        a(href='words.html') View more Work
+
+  section.home-recent-news.page
+    .container
+      h2 Recent News
+      - var nc = 0
+      - var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+      for n in site.news
+        if nc < 3
+          - var date = new Date(n.date)
+          
+          +display-news(n, date)
+          - nc++
 
 block js
   script(src='js/home.js')
-  script(src='js/slider.js')
+  script(src='js/slider.js')  

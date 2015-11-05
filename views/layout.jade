@@ -11,6 +11,7 @@ html
     block head
 
     link(href='//fonts.googleapis.com/css?family=Raleway:700,600,400,300,200', rel='stylesheet')
+    link(href='https://use.typekit.net/c/44ff0d/1w;sofia-pro,7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191,cWy:T:i3,cWt:T:i7,cWx:T:n3,cWs:T:n7/l?3bb2a6e53c9684ffdc9a9bf4185b2a627d237ba59c3d5cc9b5ca399d4ecc64787875bed8bc5e97005a974e956a1756b9a59a92e8efd00d299ad7b3d19c9f9e871d952b64a2a8a3584bf8253d45daff3381d1a626e0a768182bc0b3e21cff1a667258ecb49b5b753d628b6552dd02bda193a507390e853001a0b9', rel='stylesheet')
     link(href=relative_path+'css/font-awesome.min.css', rel='stylesheet')
 
     script src="https://use.typekit.net/bxu2mgc.js" 
@@ -27,8 +28,10 @@ html
     include _footer
 
     script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+    //script(src=relative_path+'js/jquery.min.js')
 
     != client_templates(relative_path)
 
+    script(src=relative_path+'js/wow.js')
     script(src=relative_path+'js/global.js')
     block js

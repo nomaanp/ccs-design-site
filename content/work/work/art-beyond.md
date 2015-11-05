@@ -1,6 +1,7 @@
 ---
 title: ArtBeyond
 link: http://www.art-beyond.org/
+image: content/work/assets/art-beyond/ab-home.jpg
 _render: false
 ---
 
