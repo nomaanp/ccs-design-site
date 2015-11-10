@@ -1,0 +1,80 @@
+@import '_settings'
+
+
+.work-grid-post
+  width 100%
+  float left
+  margin-bottom 70px
+  h2
+    font-size heading_main
+    margin 0 0 40px
+    text-align center
+  ul
+    margin 0 0 0px
+    padding 0px
+    width 100%
+    float left
+    li
+      width 48%
+      padding 10px
+      float left
+      list-style none
+      margin-bottom 40px
+      h2
+        line-height 23px
+        text-overflow ellipsis
+        white-space nowrap
+        width 100%
+        font-size heading_main
+        overflow hidden
+        line-height 40px
+        text-align left
+      h6
+        font-size 16px
+        margin 0px
+        color gold-color-light
+      img
+        max-width 100%
+        margin-bottom 10px
+      a
+        color #2a2a2a
+        font-size 1.9rem
+  .button
+    margin-botto 30px
+    text-align center
+    width 100%
+    float left
+    font-size 1.2em
+    a
+      background-color gold-color
+      color #fff
+      padding 25px 50px
+      font-size 100%
+      font-weight 500
+      text-transform uppercase
+      text-decoration none
+      &:hover
+        background-color gold-color-light
+
++below(639px)
+  .work-grid-post
+    margin-bottom 20px
+    ul
+      li
+        width 100%
+        padding 10px 0
+        &:last-child
+          margin-bottom  0px
+
++below(480px)
+  .work-grid-post
+    width 100%
+    h2
+      font-size 2em
+      margin-bottom 25px
+    h5
+      margin 0px
+
+    .button
+        a
+          padding 0.5em 1.5em
