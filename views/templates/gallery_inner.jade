@@ -15,11 +15,11 @@ mixin display-artwork(mediums, show_dates)
     //- add a date tile if the date has changed
     if show_dates && (last_date == -1 || art.date < last_date)
       - last_date = art.date
-      .artwork.date(data-date=last_date)
+      .artwork.date.wow.fadeInUp(data-date=last_date)
         img(src='img/gallery/white-square.gif')
         .date-container= last_date
 
-    figure.artwork(data-index=index)&attributes(art._attributes)
+    figure.artwork.wow.fadeInUp(data-index=index)&attributes(art._attributes)
       a(href='#')
         img(src=art._categories.join('/')+'/assets/'+art._img.replace('.jpg','-400x400.jpg'))
         figcaption

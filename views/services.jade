@@ -4,18 +4,10 @@ block head
   title Services | CCS Design House
 
 block css
-  link(href='css/about.css', rel='stylesheet')
+  link(href='css/services.css', rel='stylesheet')
 
 block content
-  section.page.about-page
-    .page-head
-      h1 Services
-
- 
+  section.page.services-pag
     .about.page-inner
-
-      .hero-boxes: .hero-container
-
-        .hero-box.left.artist-statement
           
-           != site.content.services['services'][0].content
+        != site.content.services['services'][0].content

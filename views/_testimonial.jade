@@ -1,0 +1,10 @@
+.testimonial.page
+  h2.wow.fadeInUp Testimonial
+  div#testimonials.owl-carousel
+    for testimonial in site.content.testimonials
+      div.item
+        .text!= testimonial.content
+        img(src=testimonial.image) 
+        div.title= testimonial.title
+        div.designation= testimonial.designation
+      

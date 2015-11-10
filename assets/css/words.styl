@@ -3,6 +3,13 @@
 @import 'jeet'
 
 .words-page
+  padding-top 100px
+  .page-head
+    width 92.225%
+    float left
+    margin-left 3.88748%
+    margin-right 1.07451%
+    padding-top 0px
   .words
     clearfix()
   
@@ -23,7 +30,7 @@
           &:before
             content: ""
             display: block
-            absolute: left top 5px
+            absolute: left top 9px
             
             transform: scale(0.5)
             background-color: #4ABBB7
@@ -40,7 +47,7 @@
     +above(980px)
       .wordsnav
         float: left
-        width: 250px
+        width: 270px
         &.fixed
           fixed: top 55px bottom 0
           overflow-y: auto
@@ -58,6 +65,7 @@
       text-transform: capitalize
       letter-spacing: 1.5px
       text-align: center
+      margin-top 0px
 
     article
       margin-bottom: 50px
@@ -93,6 +101,9 @@
       color: #FFF
       font-size: 1.875em
       letter-spacing: 0.5px
-      max-width: 500px
+      max-width: 50%
       > p:first-of-type
         text-indent: 0.75em
+      > p
+        color #fff
+        font-size 2rem

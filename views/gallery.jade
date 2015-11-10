@@ -1,7 +1,7 @@
 extends layout
 
 block head
-  title Work
+  title Gallery
 
 block css
   link(href='css/gallery.css', rel='stylesheet')
@@ -29,7 +29,7 @@ mixin load-artwork(mediums)
 block content
   section.page.gallery-page
     .page-head
-      h1 Work
+      h1 Gallery
 
     .gallery.page-inner
       +load-artwork(['oil', 'digital'])

@@ -17,7 +17,10 @@ html
     script src="https://use.typekit.net/bxu2mgc.js" 
     script try{Typekit.load({ async: true });}catch(e){} 
 
+    link(href=relative_path+'css/owl-carousel.css', rel='stylesheet')
+    link(href=relative_path+'css/animate.css', rel='stylesheet')
     link(href=relative_path+'css/global.css', rel='stylesheet')
+
     block css
 
   body
@@ -33,5 +36,6 @@ html
     != client_templates(relative_path)
 
     script(src=relative_path+'js/wow.js')
+    script(src=relative_path+'js/owl.carousel.js')
     script(src=relative_path+'js/global.js')
     block js

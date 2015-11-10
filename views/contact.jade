@@ -1,0 +1,15 @@
+extends layout
+
+block head
+  title Contact | CCS Design
+
+block css
+  link(href='css/about.css', rel='stylesheet')
+
+block content
+  section.page.about-page
+    .page-head
+      h1 Contact
+    != site.content.contact['address'][0].content
+
+block js   

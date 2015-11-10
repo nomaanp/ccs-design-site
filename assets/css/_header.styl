@@ -3,9 +3,9 @@
   color: #111
   width: 100%
   z-index: 750
-  background-color: rgba(255,255,255,0.45);
+  background-color: rgba(255,255,255,0.99);
   //height: header-height2
-  padding: 25px 0
+  padding: 15px 0
   transition: all 0.4s ease-in-out
   -web-kit-transition: all 0.4s ease-in-out
   
@@ -15,7 +15,7 @@
     color: #111
 
   .share
-    absolute: right 20px top 24px
+    absolute: right 38px top 30px
     z-index: 600
     transition: all 0.4s ease-in-out
     -web-kit-transition: all 0.4s ease-in-out
@@ -66,11 +66,11 @@
       display: block
       margin: 0 auto
       box-sizing: border-box
-      background: url('../img/icons/ccs-logo.svg') no-repeat center
-      size: 50px  
+      //background: url('../img/icons/ccs-logo.svg') no-repeat center
+      size: 75px 
 
   .menu
-    absolute: top 24px left 10px
+    absolute: top 30px left 28px
     z-index: 600
     transition: all 0.4s ease-in-out
     -web-kit-transition: all 0.4s ease-in-out
@@ -104,9 +104,8 @@
       display: none
 
     .logo
-      position: static
       display: inline-block
-      width: auto
+      text-align center
       a
         display: inline-block
         width: auto
@@ -116,6 +115,8 @@
         content: none
     .menu
       right: 0
+      .icon
+        float right !important
 
   +between(441px, 625px)
     .logo a
@@ -128,7 +129,7 @@
 
   +below(440px)
     .logo a
-      padding: 0 55px 0 10px
+      padding: 0px
     .menu .menu-btn
       .text
         display: none
@@ -203,35 +204,29 @@
       text-transform: uppercase
       &:hover
         text-decoration: underline
+    +below(600px)
+      a
+        padding 15px 0
 
 
 .page-head
   clearfix()
-  padding: 70px 35px 0 35px
+  padding: 30px 0px 15px
   margin-bottom: 15px
   
   h1
-    font-family: raleway
-    font-size: 2em
-    font-weight: normal
-    letter-spacing: 2px
+    font-size: 3em
+    font-weight: bold
     color: #111
-    text-transform: uppercase
-    
     margin: 0 0 10px
     padding-bottom: 10px
     float: left
-    position: relative
-    &:before
-      content: ""
-      size: 100px 5px
-      background-color: #E5E5E5
-      absolute: bottom left 8px
-    
-    +below(400px)
-      font-size: 3em
+    width auto
+    position: relative    
+    +below(480px)
+      font-size: 2em
       &:before
-        size: 125px 7.5px
+        size: 90% 7.5px
 
   .filter
     float: right
@@ -281,13 +276,20 @@
 
 #header.fix-header 
   padding: 10px 0
-  background-color: rgba(255,255,255,0.85);
+  background-color: rgba(255,255,255,1);
 
 #header.fix-header .share
   top: 10px
 
 #header.fix-header .menu
   top: 10px
+
+#header .logo img
+  -webkit-transition width 1.5s ease, height 1.5s ease
+  transition width 1.5s ease, height 1.5s ease
+
+#header.fix-header .logo img
+  size 50px
 
 #sidenav ~ .page
   filter: blur(5px);

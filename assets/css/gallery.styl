@@ -3,6 +3,12 @@
 @import 'jeet'
 
 .gallery-page
+  .page-head
+    width 92.225%
+    float left
+    margin-left 3.88748%
+    margin-right 1.07451%
+    padding-top 70px
   .gallery
     h2
       font-size: 2em
@@ -58,13 +64,17 @@
         display: table-cell
         vertical-align: middle
         padding: 0 10px
+        p
+          color #fff
       
       .title
         font-weight: bold
         letter-spacing: 2px
         font-size: 1.25em
+        color #fff
         .medium
           letter-spacing: 1px
+          color #fff
 
     &:hover figcaption
       transition: height 0.25s linear, opacity 0.25s linear
@@ -79,9 +89,9 @@ body.modal
 
   .gallery-modal
     display: block
-    fixed: top header-height left bottom right
+    fixed: top 0px left bottom right
     background-color: rgba(0,0,0,0.9)
-    z-index: 400
+    z-index: 999
     .modal-inner
       size: 100%
     .close

@@ -1,0 +1,14 @@
+.work-grid-post
+      h2.wow.fadeInUp Projects
+      ul#work
+        - var count = 0
+        
+        for w in site.content.work['work']
+          if count < 2
+            li.wow.fadeInUp
+              a(href=w._url): img(src=w.image)
+              h6= w.tagline
+              h2: a(href=w._url)= w.title
+              - count++
+      h5.button.wow.fadeIn
+        a(href='work.html') View more Work

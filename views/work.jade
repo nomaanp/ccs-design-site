@@ -4,7 +4,7 @@ block head
   title Work | CCS Design House
 
 block css
-  link(href='css/about.css', rel='stylesheet')
+  link(href='css/work.css', rel='stylesheet')
 
 block content
   section.page.about-page
@@ -12,10 +12,12 @@ block content
       h1 Work
 
  
-    .about.page-inner
-
-      .hero-boxes: .hero-container
-
-        .hero-box.left.artist-statement
-          
-           != site.content.work['work'][0].content
+    .work-grid-post
+      ul#work
+        
+        for w in site.content.work['work']
+          li.wow.fadeInUp
+            a(href=w._url): img(src=w.image)
+            h6= w.tagline
+            h2: a(href=w._url)= w.title
+              

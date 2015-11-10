@@ -102,13 +102,13 @@
   box-sizing border-box
   clear both
   float left
-  margin 30px 0 30px 33.3333%
+  margin 15px 0 15px 33.3333%
   padding-left 0.83333%
   text-align center
   padding-right 0.83333%
   width 33.3333%
   img
-    width 150px
+    width 75px
 
 .footer-social-links .twitter a:hover, .footer-social-links .twitter a.active
   background-color #10b1e3
@@ -125,3 +125,34 @@
 .footer-social-links .dribbble a:hover, .footer-social-links .dribbble a.active
   background-color #EA4C89
   color #fff
+
++below(480px)
+  .footer-social-links
+    .links
+      li
+        width 25.667%
+
+    .facebook
+      margin-left 10%
+
+  .footer-links
+    width 50%
+
+  .footer-links-2
+    width 50%
+
+  .footer-address
+    width 100%
+    text-align center
+    p
+      width 100%
+      margin-top 1.5em
+
++below(360px)
+  .footer-links
+    width 100%
+    text-align center
+
+  .footer-links-2
+    width 100%
+    text-align center

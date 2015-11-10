@@ -1,164 +1,106 @@
 @import '_settings'
 @import '_animations'
 @import 'jeet'
+@import 'work'
+@import 'testimonial'
 
-hero_img = url('../img/home/hero.jpg')
-
-// backgrounds / colors for navigation boxes
-gallery_bg = url('../img/home/gallery-bg.jpg')
-gallery_color = rgba(0,0,0,0.7)
-
-words_bg = #FFF
-words_color = rgba(0,0,0,0.7)
-
-about_bg = #484343
-about_color = #50E3C2
-
-news_bg = #000
-news_color = #50E3C2
 
 html, body, .home-page
-  height: 100%
+  height 93%
 
 .home-page2
-  width: 100%;
-  float: left;
-  display: block;
-  margin-right: 1.07451%;
-  width: 92.22504%;
-  margin-left: 3.88748%;
-  -webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  transition: all 300ms;
-  padding-top: 0px;
+  width 100%
+  float left
+  display block
+  margin-right 1.07451%
+  width 92.22504%
+  margin-left 3.88748%
+  -webkit-transition all 300ms
+  -moz-transition all 300ms
+  transition all 300ms
+  padding-top 0px
 
 .home-page
-  width: 100%;
-  float: left;
-  margin-top: 100px;
-  -webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  transition: all 300ms;
-  padding-top: 0px;
+  width 92.225%
+  float left
+  margin-top 205px
+  margin-left 3.88748%
+  margin-right 1.07451%
+  -webkit-transition all 300ms
+  -moz-transition all 300ms
+  transition all 300ms
+  padding-top 0px
 
-nav
-  clearfix()
-  border: 1px solid #979797
-  border-width: 1px 0
-  
-  .item
-    col(1/2, gutter:0)
-    position: relative
-    height: 250px
-    border: 1px solid #979797
-    box-sizing: border-box
-    +below(625px)
-      stack()
-
-    p
-      align()
-      text-align: center
-      text-transform: uppercase
-      letter-spacing: 2px
-      font-weight: 500
-      size: 210px 26px
-      line-height: 26px
-      border-width: 1px 0
-      border-style: solid
-      double-border(15px, 26px, false)
-      +below(300px)
-        width: auto
-        padding: 0 20px
-
-  .gallery
-    background: gallery_bg
-    p
-      color: gallery_color
-
-  .words
-    background: words_bg
-    p
-      color: words_color
-
-  .about
-    background: about_bg
-    p
-      color: about_color
-
-  .news
-    background: news_bg
-    p
-      color: news_color
 
 .cd-hero2
-    position: relative
+    position relative
     float right
-    margin: auto;
+    margin auto
     padding 20px
-    height: 100%
-    width: 100%
+    height 100%
+    width 100%
   
   .cd-hero
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 20px;
-    margin-top: -100px;
-    margin-right: 0px
-    position: relative;
-    float: left;
-    width: 100%;
+    background-position center center
+    background-repeat no-repeat
+    background-size cover
+    margin-bottom 20px
+    margin-top -100px
+    margin-right 0px
+    position relative
+    float left
+    width 100%
     height 100%
-    text-align: center;
+    text-align center
     
 
     .cd-hero-slider
-      height: 100%
+      height 100%
       
     .hero-content
-      color: #FFF
-      text-align: center
-      width: 75%
+      color #FFF
+      text-align center
+      width 75%
       h1
-        text-transform: uppercase
-        font-family: raleway
-        font-weight: 100
-        font-size: 3em
+        text-transform uppercase
+        font-family raleway
+        font-weight 100
+        font-size 3em
     
       +above(451px)
         align(both)
       +below(450px)
-        width: 100%
-        padding: 0 10px
-        box-sizing: border-box
+        width 100%
+        padding 0 10px
+        box-sizing border-box
         align(vertical)
         h1
-          font-size: 2em
+          font-size 2em
 
     .cd-full-width
-      padding-top: 0 !important
+      padding-top 0 !important
 
     .slide-1
-      background-image: hero_img
-      background-size: cover
-      background-position: center right
+      background-image hero_img
+      background-size cover
+      background-position center right
     
     .slide-2
-      background-image: hero_img
-      background-size: cover
-      background-position: center
+      background-image hero_img2
+      background-size cover
+      background-position center
   
     .arrow
-      absolute: bottom 60px left 50%
-      margin-left: -21px
+      absolute bottom 60px left 50%
+      margin-left -21px
       a
         bounce(2s, true, linear)
-        background-color: rgba(255, 255, 255, 0.1)
-        border-radius: 25px
-        color: #FFF
-        font-size: 1.25em
-        display: block
-        padding: 8px 18px
+        background-color rgba(255, 255, 255, 0.1)
+        border-radius 25px
+        color #FFF
+        font-size 1.25em
+        display block
+        padding 8px 18px
 
 
 h1
@@ -167,22 +109,22 @@ h1
     font-weight 700
 
 .summary
-  width: 100%
-  float: left
-  margin-bottom: 70px
+  width 100%
+  float left
+  margin-bottom 70px
   .summary-big
     display block
     float left
     margin-left 5.77496%
     width 50.563%
-    &:last-child
+    &last-child
       margin-right 0
 
     h1
-      margin-top: 0px
-      font-size: 4em
-      position: relative
-      text-transform: uppercase
+      margin-top 0px
+      font-size about_heading
+      position relative
+      text-transform uppercase
     h5
       color #937D57
       padding-bottom 10px
@@ -193,16 +135,16 @@ h1
     margin-right 1.07451%
     margin-top -90px
     padding 60px 55px 60px 50px
-    background-color: #f4f1ef
+    background-color about_bg
     p
       margin-bottom 40px
-      font-size: 22px
+      font-size about_font
       a
-        color #937D57
+        color about_color
         padding 10px 10px 5px 0
-        font-size: 18px
+        font-size 18px
         text-decoration none
-        border-bottom 4px solid #beae92
+        border-bottom 4px solid about_color
         -webkit-transition all 200ms cubic-bezier(0.19, 1, 0.22, 1)
         -moz-transition all 200ms cubic-bezier(0.19, 1, 0.22, 1)
         transition all 200ms cubic-bezier(0.19, 1, 0.22, 1)
@@ -222,69 +164,65 @@ h1
         text-decoration none
         border-bottom 4px solid #beae92
 
-.work-grid-post
-  width 100%
-  float left
-  margin-bottom 70px
-  h2
-    font-size 4em
-    margin 0 0 40px
-  ul
-    margin 0 0 0px
-    padding 0px
-    width 100%
-    float left
-    li
-      width 31%
-      padding 10px;
-      float left
-      list-style none
-      margin-bottom 40px
-      h2
-        line-height 23px
-        text-overflow: ellipsis
-        white-space: nowrap
-        width: 100%
-        overflow: hidden
-      img
-        max-width 100%
-        min-height 303px
-      a
-        color: #2a2a2a
-        font-size: 1.6rem
-  .button
-    margin-botto 30px
-    text-align center
-    font-size 1.1em
-    a
-      background-color: #937d57;
-      color #fff;
-      padding 25px 50px;
-      font-size 100%
-      font-weight 500
-      text-transform uppercase
-      text-decoration none
-      &:hover
-        background-color: #beae92;
++between(768px, 985px)
+  .summary
+    .summary-big
+      width 69.563%
+
+    .summary-box
+      margin-left 25.762%
+
++below(767px)
+  .summary
+    .summary-big
+      width 85.563%
+
+    .summary-box
+      margin-left 14.762%
+
++below(640px)
+  .summary
+    .summary-big
+      width 80.563%
+      h1
+        font-size 3em
+
+    .summary-box
+      margin-left 14.762%
+
++below(479px)
+  .summary
+    margin-bottom 30px
+    .summary-big
+      width 100%
+      margin-left 0px
+      h1
+        font-size 2em
+
+    .summary-box
+      margin-left 0%
+      margin-top -42px
+      padding 30px 25px 30px 25px
+
 
 .home-recent-news
   width 100%
   float left
-  margin-bottom 40px
-  background #ebebeb url("../img/home/temp_background_texture.gif") repeat scroll center center
+  margin-bottom 0px
+  background recent_img
   h2
-    font-size 2em
+    font-size heading_main
     text-align center
     margin 40px 0
   .container
-    display: block;
-    float: left;
-    margin-left: 3.88748%;
-    margin-right: 1.07451%;
-    padding-top: 0;
-    width: 92.225%;
+    display: block
+    float left
+    margin-left 3.88748%
+    margin-right 1.07451%
+    padding-top 0
+    width 92.225%
   article
-    border-bottom 1px solid #a3a6ac
+    border-top 1px solid #a3a6ac
     color #a3a6ac
     display block
     overflow hidden
@@ -292,4 +230,67 @@ h1
     position relative
     text-decoration none
     text-align center
+    .date
+      color #a3a6ac
+    h4
+      color #3b3d44
+      font-size heading_sub
+      margin-top 12px
+      margin-bottom 12px
+      a
+        color #3b3d44
+  .button
+    width 100%
+    float left
+    margin 30px 0
+    text-align center
+    a
+      border 1px solid recent_btn
+      color #a3a6ac
+      display inline-block
+      float none
+      font-size 1rem
+      letter-spacing 0px
+      padding 0.8em 2.5em
+      text-decoration none
+      text-transform uppercase
+      overflow hidden
+      position relative
+      -webkit-transition all 0.3s ease-in-out
+      -ms-transition all 0.3s ease-in-out
+      transition all 0.3s ease-in-out
+      &:hover
+        background #A3A6AC
+        color #fff
+    a:after
+      background recent_btn none repeat 
+      content ""
+      display block
+      height 100%
+      left 0
+      position absolute
+      top 100%
+      width 100%
+      z-index -1
+      -webkit-transition all 0.3s ease-in-out
+      -ms-transition all 0.3s ease-in-out
+      transition all 0.3s ease-in-out
+    a:hover:after
+        top 0px
+
++below(480px)
+  .home-recent-news
+    width 100%
+    h2
+      margin 25px 0
+      font-size 2em
+    h4
+      font-size: 1rem;
+    .date
+      font-size 14px
+    .button
+      a
+        padding 0.5em 1.5em
+
+
 

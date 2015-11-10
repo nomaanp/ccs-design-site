@@ -1,0 +1,14 @@
+section.home-recent-news.page
+    .container
+      h2.wow.fadeIn Recent News
+      - var nc = 0
+      - var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+      for n in site.news
+        if nc < 3
+          - var date = new Date(n.date)
+          
+          +display-news(n, date)
+          - nc++
+      .button.wow.fadeIn
+        a(href='news.html') Read More

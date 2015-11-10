@@ -22,13 +22,13 @@ mixin display-news(exhibit, date)
 
 block content
   section.page.home-page
-    .cd-hero
+    .cd-hero.wow.fadeIn
       ul.cd-hero-slider.autoplay
         li.selected
           .slide-1.cd-full-width
             .hero-content
               h1 New Home &amp; 
-        //li
+        li
           .slide-2.cd-full-width
             .hero-content
               h1 Welcome to C C Southard's Website
@@ -36,57 +36,16 @@ block content
       .arrow
         a(href='#'): i.fa.fa-long-arrow-down
 
-    //-.hero
-      .hero-content
-        h1 Take a seat &amp; gaze
-
-      .arrow
-        a(href='#'): i.fa.fa-long-arrow-down
 
   section.page2.home-page2
-    //nav
-      a(href='gallery.html').item.gallery
-        p Gallery
 
-      a(href='words.html').item.words
-        p Words
+    include _about
 
-      a(href='about.html').item.about
-        p About
+    include _projects
 
-      a(href='news.html').item.news
-        p News
+  include _recent
 
-    .hero-boxes: .hero-container
-          != site.content.about['statement'][0].content
-
-    //!= site.content.work['work'][0].content
-    .work-grid-post
-      h2.wow.fadeInUp Projects
-      ul#work
-        - var count = 0
-        
-        for w in site.content.work['work']
-          if count < 3
-            li.wow.fadeInUp
-              a(href=w._url): img(src=w.image)
-              h2: a(href=w._url)= w.title
-              - count++
-      h5.button
-        a(href='words.html') View more Work
-
-  section.home-recent-news.page
-    .container
-      h2 Recent News
-      - var nc = 0
-      - var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-
-      for n in site.news
-        if nc < 3
-          - var date = new Date(n.date)
-          
-          +display-news(n, date)
-          - nc++
+  include _testimonial
 
 block js
   script(src='js/home.js')

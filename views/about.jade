@@ -1,33 +1,29 @@
 extends layout
 
 block head
-  title About | CCS Design
+  title About | CCS Design 
 
 block css
   link(href='css/about.css', rel='stylesheet')
 
 block content
   section.page.about-page
-    .page-head
-      h2 We are CCS Design House
 
-    .about.page-inner
+    .about
 
       .hero-boxes: .hero-container
 
         .hero-box.left.artist-statement
           != site.content.about['statement'][0].content
-
-        .hero-box.right.profile
-          .profile-img
-            img(src='img/about/profile.jpg')
             
 
-      article.process
-        h3 Process
-        != site.content.about['process'][0].content
+      != site.content.about['process'][0].content
+        
 
-    .quote
+    //.quote
       .content
-        != site.content.about['quote'][0].content
-      
+        != site.content.about['quote'][0].content 
+
+    include _testimonial
+
+block js   

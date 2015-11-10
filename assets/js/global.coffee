@@ -32,6 +32,17 @@ $('#sidenav .close a').click (e) ->
     $sidenav.animate({'margin-left':0}, {complete:-> $(this).addClass('hidden')})
     $('#sidenav ul li').removeClass 'fadeInUp2'
 
+$ ->
+  header = $('#header')
+  $(window).scroll ->
+    scroll = $(window).scrollTop()
+    if scroll >= 3
+      $('#header').removeClass('static-header').addClass 'fix-header'
+    else
+      $('#header').removeClass('fix-header').addClass 'static-header'
+    return
+  return
+
 
 wow = new WOW(
   boxClass: 'wow'
@@ -46,4 +57,17 @@ wow = new WOW(
   scrollContainer: null)
 wow.init()
 
+$('#testimonials').owlCarousel
+  navigation: false
+  slideSpeed: 300
+  paginationSpeed: 400
+  pagination: true
+  singleItem: true
 
+$('#projects').owlCarousel
+  navigation: false
+  slideSpeed: 300
+  paginationSpeed: 400
+  pagination: true
+  singleItem: true
+  autoHeight: true
