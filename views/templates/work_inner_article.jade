@@ -1,0 +1,7 @@
+.work-grid-post
+  ul#work
+    each project in locals.projects
+      li.wow.fadeInUp
+          a(href=project._url): img(src=project._categories.join('/')+'/assets/'+project.image.replace('.jpg','-560x320.jpg'))
+          h6= project.tagline
+          h2: a(href=project._url)= project.title

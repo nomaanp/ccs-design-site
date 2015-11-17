@@ -6,18 +6,22 @@ block head
 block css
   link(href='css/work.css', rel='stylesheet')
 
+mixin load-projects()
+  - locals.projects = []
+
+  each project in site.content.work['work']
+    - locals.projects.push(project)
+
 block content
   section.page.about-page
     .page-head
       h1 Work
 
- 
-    .work-grid-post
-      ul#work
-        
-        for w in site.content.work['work']
-          li.wow.fadeInUp
-            a(href=w._url): img(src=w.image)
-            h6= w.tagline
-            h2: a(href=w._url)= w.title
-              
+    .words.page-inner
+      +load-projects()
+      include templates/work_inner
+
+block js
+  script.
+    var projects = !{JSON.stringify(locals.projects)}
+  script(src='js/work.js')

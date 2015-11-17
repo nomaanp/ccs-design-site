@@ -6,9 +6,9 @@
         for w in site.content.work['work']
           if count < 2
             li.wow.fadeInUp
-              a(href=w._url): img(src=w.image)
+              a(href=w._url): img(src='content/work/work/assets/'+w.image.replace('.jpg','-560x320.jpg'))
               h6= w.tagline
               h2: a(href=w._url)= w.title
               - count++
       h5.button.wow.fadeIn
-        a(href='work.html') View more Work
+        a(href='work.html') View more Work 

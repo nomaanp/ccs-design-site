@@ -6,11 +6,7 @@ block head
 
 block css
   link(href=relative_path+'css/item_single.css', rel='stylesheet')
-  link(href=relative_path+'css/owl-carousel.css', rel='stylesheet')
 
-- function slugify(name) {
-  - return name.toLowerCase().replace(/[^\w]+/g, '-');
-- }
 
 block content
   article.page.item-single-page
@@ -19,12 +15,10 @@ block content
       h1= post.title
       if post.link
         cite: a(href=post.link) publication
-      if post.slider
-        div#projects1.owl-carousel1
-          for w in post.slider
-            div.item1.wow.fadeInUp
-              img(src=w)
+        div.owl-carousel1
+            div.item11.wow.fadeInUp
+              img(src='assets/'+post.image)
     block projects-content
 
 block js
-  block projects-js
+  block projects-js  

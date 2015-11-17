@@ -7,7 +7,7 @@ block css
   link(href='css/words.css', rel='stylesheet')
 
 mixin load-words(types)
-  - locals.words = {}
+  - locals.words = {} 
   each type in types
 
     a(href='#'+type, data-type=type).box: span= type
