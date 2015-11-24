@@ -10,6 +10,11 @@ block content
   section.page.about-page
     .page-head
       h1 Contact
-    != site.content.contact['address'][0].content
+    .office
+      != site.content.contact[0].content
+    .opportunities 
+      != site.content.contact[1].content
 
-block js   
+
+block js 
+  script(src=relative_path+'js/contact.js')   

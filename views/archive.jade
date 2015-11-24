@@ -1,0 +1,39 @@
+extends layout
+block head
+  title Archive | CCS Design
+
+block css
+  link(href='css/archive.css', rel='stylesheet')
+
+mixin display-news(all_news)
+  - locals.sorted_news = []
+  - var current_date = new Date()
+
+  each news in all_news
+    //- console.log(news)
+    - locals.sorted_news.push(news)
+  
+  - locals.sorted_news.sort(function(a,b){
+      - var result = b.date - a.date;
+      - if (result == 0) {
+        - var titleA = a.title.toString().toLowerCase();
+        - var titleB = b.title.toString().toLowerCase();
+        - result = titleA.localeCompare(titleB);
+      - }
+      - return result;
+  - })
+
+block content
+  section.home-recent-news.page.archive-page
+    .container
+      h2.wow.fadeIn Archive
+    div#archive.container
+      - var all_news = site.news
+      
+      - var current_date = new Date()
+
+      +display-news(all_news)
+      include templates/archive_inner
+      
+
+block js   	

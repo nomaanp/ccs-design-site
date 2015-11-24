@@ -38,6 +38,7 @@
       .date
         text-transform: uppercase
         display: block
+        font-size 12px
 
   .news-item
     margin-bottom: 50px
@@ -53,6 +54,13 @@
         img
           display: block
           height: 75px
+          filter grayscale(100%)
+          -webkit-filter grayscale(100%)
+          transition all 0.3s ease-in-out
+          -webkit-transition all 0.3s ease-in-out
+          &:hover
+            filter grayscale(0%)
+
   
       h2
         margin: 10px 0

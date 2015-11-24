@@ -1,0 +1,12 @@
+ul.archive
+  - var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  each news, index in locals.sorted_news
+    - var date = new Date(news.date)
+    li.archive-item
+      span.date
+        = date.getDate() + ', '
+        = monthNames[date.getMonth()] + ' '
+        = date.getFullYear()
+      span
+        a(href='.'+news._url)
+          = news.title

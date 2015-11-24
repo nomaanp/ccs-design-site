@@ -23,10 +23,10 @@ mixin display-news(post)
         a(href='.'+post._url)
           = post.title
       
-    p
-      != post.snippet
-      br
-      small: a(href='.'+post._url) read more &raquo;
+      //p
+        != post.snippet
+        br
+        small: a(href='.'+post._url) read more &raquo;
 
 mixin display-exhibit(exhibit, date)
   article.exhibit-item
